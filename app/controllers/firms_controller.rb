@@ -1,5 +1,5 @@
 class FirmsController < ApplicationController
-  before_action :set_firm, only: [:show, :edit, :update, :destroy]
+  before_action :set_firm, only: [:show, :edit, :update, :destroy, :vote]
 
   # GET /firms
   # GET /firms.json
