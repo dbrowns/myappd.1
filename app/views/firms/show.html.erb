@@ -1,79 +1,52 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Firm -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Firm %></h1>
+</div>
 
-<p>
-  <strong>Firm:</strong>
-  <%= @firm.firm_id %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:firm_id) %></dt>
+      <dd><pre class="prettyprint"><%= @firm.firm_id %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:type) %></dt>
+      <dd><pre class="prettyprint"><%= @firm.type %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:sector) %></dt>
+      <dd><pre class="prettyprint"><%= @firm.sector %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:specialties) %></dt>
+      <dd><pre class="prettyprint"><%= @firm.specialties %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:vintage) %></dt>
+      <dd><pre class="prettyprint"><%= @firm.vintage %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:location) %></dt>
+      <dd><pre class="prettyprint"><%= @firm.location %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:size) %></dt>
+      <dd><pre class="prettyprint"><%= @firm.size %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:projects) %></dt>
+      <dd><pre class="prettyprint"><%= @firm.projects %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:top_10_products) %></dt>
+      <dd><pre class="prettyprint"><%= @firm.top_10_products %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:accolades) %></dt>
+      <dd><pre class="prettyprint"><%= @firm.accolades %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:state_licensure) %></dt>
+      <dd><pre class="prettyprint"><%= @firm.state_licensure %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:name) %></dt>
+      <dd><pre class="prettyprint"><%= @firm.name %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:email) %></dt>
+      <dd><pre class="prettyprint"><%= @firm.email %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:phone) %></dt>
+      <dd><pre class="prettyprint"><%= @firm.phone %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:website) %></dt>
+      <dd><pre class="prettyprint"><%= @firm.website %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Type:</strong>
-  <%= @firm.type %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              firms_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_firm_path(@firm), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              firm_path(@firm),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Sector:</strong>
-  <%= @firm.sector %>
-</p>
-
-<p>
-  <strong>Specialties:</strong>
-  <%= @firm.specialties %>
-</p>
-
-<p>
-  <strong>Vintage:</strong>
-  <%= @firm.vintage %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @firm.location %>
-</p>
-
-<p>
-  <strong>Size:</strong>
-  <%= @firm.size %>
-</p>
-
-<p>
-  <strong>Projects:</strong>
-  <%= @firm.projects %>
-</p>
-
-<p>
-  <strong>Top 10 products:</strong>
-  <%= @firm.top_10_products %>
-</p>
-
-<p>
-  <strong>Accolades:</strong>
-  <%= @firm.accolades %>
-</p>
-
-<p>
-  <strong>State licensure:</strong>
-  <%= @firm.state_licensure %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @firm.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @firm.email %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
-  <%= @firm.phone %>
-</p>
-
-<p>
-  <strong>Website:</strong>
-  <%= @firm.website %>
-</p>
-
-<%= link_to 'Edit', edit_firm_path(@firm) %> |
-<%= link_to 'Back', firms_path %>

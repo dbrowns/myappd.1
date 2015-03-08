@@ -1,25 +1,100 @@
-<%= simple_form_for(@firm) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :firm_id %>
-    <%= f.input :type %>
-    <%= f.input :sector %>
-    <%= f.input :specialties %>
-    <%= f.input :vintage %>
-    <%= f.input :location %>
-    <%= f.input :size %>
-    <%= f.input :projects %>
-    <%= f.input :top_10_products %>
-    <%= f.input :accolades %>
-    <%= f.input :state_licensure %>
-    <%= f.input :name %>
-    <%= f.input :email %>
-    <%= f.input :phone %>
-    <%= f.input :website %>
+<%= form_for @firm, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :firm_id, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :firm_id, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :type, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :type, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :sector, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :sector, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :specialties, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :specialties, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :vintage, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :vintage, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :location, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :location, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :size, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :size, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :projects, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :projects, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :top_10_products, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :top_10_products, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :accolades, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :accolades, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :state_licensure, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :state_licensure, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :name, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :name, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :email, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.email_field :email, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :phone, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :phone, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :website, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :website, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  firms_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
