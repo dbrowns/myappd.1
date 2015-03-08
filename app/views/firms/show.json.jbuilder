@@ -1,0 +1,1 @@
+json.extract! @firm, :id, :firm_id, :type, :sector, :specialties, :vintage, :location, :size, :projects, :top_10_products, :accolades, :state_licensure, :name, :email, :phone, :website, :created_at, :updated_at

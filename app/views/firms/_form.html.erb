@@ -1,0 +1,25 @@
+<%= simple_form_for(@firm) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :firm_id %>
+    <%= f.input :type %>
+    <%= f.input :sector %>
+    <%= f.input :specialties %>
+    <%= f.input :vintage %>
+    <%= f.input :location %>
+    <%= f.input :size %>
+    <%= f.input :projects %>
+    <%= f.input :top_10_products %>
+    <%= f.input :accolades %>
+    <%= f.input :state_licensure %>
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :phone %>
+    <%= f.input :website %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
