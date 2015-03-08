@@ -1,4 +1,5 @@
 ActiveAdmin.register Firm do
+  permit_params :firm_id, :type, :sector, :specialties, :vintage, :location, :size, :projects, :top_10_products, :accolades, :state_licensure, :name, :email, :phone, :website
 
 
   # See permitted parameters documentation:
